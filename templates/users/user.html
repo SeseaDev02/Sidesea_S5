@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+<h2>Vista de usuario</h2>
+{% if usuario %}
+    <p><strong>Usuario:</strong> {{ usuario }}</p>
+{% else %}
+    <p>No se recibió el usuario.</p>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

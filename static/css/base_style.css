@@ -1,0 +1,902 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: 600;
+}
+
+/* Clases de visibilidad responsiva */
+.desktop-only {
+    display: flex !important;
+}
+
+.mobile-only {
+    display: none !important;
+}
+
+/* NAVBAR */
+.navbar-custom {
+    padding: 0 50px;
+    height: 120px;
+    width: 100%;
+    border-bottom: solid 1px #6F6F6F;
+}
+
+.navbar-container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+#logo-sesea img {
+    width: 120px;
+    height: auto;
+}
+
+/* Secciones del navbar */
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Opciones del navbar */
+.navbar-opcions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+/* Botón hamburguesa */
+.dropdown-btn {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dropdown-btn:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-btn i {
+    color: #3D6C5E;
+    font-size: 28px;
+}
+
+/* Links */
+.navbar-opcions a,
+.navbar-form button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D6C5E;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.navbar-opcions a:hover,
+.navbar-form .nav-form-busqueda:hover {
+    color: #6DBD9E;
+}
+
+/* Lista del navbar derecho */
+.navbar-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding-right: 35px;
+}
+
+/* Botón de sesión con diseño especial */
+#nav-form-sesion {
+    background: radial-gradient(circle at right, transparent 0, transparent 35px, #3D6C5E 20px);
+    color: white !important;
+    height: 35px;
+    padding-left: 11px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    max-width: 260px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+#nav-form-sesion:hover {
+    background: radial-gradient(circle at right, transparent 0, transparent 35px, #75A39A 20px);
+}
+
+#nav-form-sesion:hover i.bi {
+    color: #75A39A;
+}
+
+#nav-form-sesion i.bi {
+    font-size: 50px;
+    color: #3D6C5E;
+    transform: translate(13px, 1px);
+    transition: color 0.3s;
+}
+
+/* DROPDOWNS DESKTOP - Ocultos por defecto */
+#form-dropdown-busqueda,
+#form-dropdown-sesion {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 2px solid #6DBD9E;
+    box-shadow: 0 4px 10px rgba(109, 189, 158, 0.3);
+    z-index: 999;
+}
+
+/* Piquitos de los dropdowns desktop */
+#form-dropdown-busqueda::before,
+#form-dropdown-sesion::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #6DBD9E;
+}
+
+#form-dropdown-busqueda::after,
+#form-dropdown-sesion::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+}
+
+#form-dropdown-busqueda::before,
+#form-dropdown-busqueda::after {
+    right: 80px;
+}
+
+#form-dropdown-sesion::before,
+#form-dropdown-sesion::after {
+    right: 120px;
+}
+
+/* Clase para mostrar dropdowns */
+.show {
+    display: block !important;
+}
+
+/* FORMULARIO BÚSQUEDA DESKTOP */
+.navbar-form {
+    position: relative;
+}
+
+#form-dropdown-busqueda {
+    top: 150%;
+    right: 0;
+    width: 640px;
+    height: 240px;
+    padding: 40px;
+}
+
+/* FORMULARIO SESIÓN DESKTOP */
+#form-dropdown-sesion {
+    top: 150%;
+    right: 0;
+    width: 750px;
+    height: 450px;
+    padding: 40px;
+}
+
+/* Títulos de formularios desktop */
+#form-dropdown-busqueda h2,
+#form-dropdown-sesion h2,
+#form-dropdown-busqueda h3,
+#form-dropdown-sesion h3,
+#form-dropdown-busqueda h5,
+#form-dropdown-sesion h5 {
+    margin-bottom: 10px;
+    color: #3D6C5E;
+    text-align: center;
+}
+
+/* Formularios desktop */
+#form-dropdown-busqueda form,
+#form-dropdown-sesion form {
+    display: flex;
+    flex-direction: column;
+    color: #3D6C5E;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Grupo de formulario desktop */
+#form-dropdown-busqueda .form-group,
+#form-dropdown-sesion .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Etiquetas desktop */
+#form-dropdown-busqueda label {
+    flex: 0 0 150px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
+#form-dropdown-sesion label {
+    flex: 0 0 160px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 15px;
+}
+
+/* Inputs desktop */
+#form-dropdown-busqueda input {
+    flex: 1;
+    min-width: 150px;
+    max-width: 340px;
+    padding: 8px;
+    border: 2px solid #6DBD9E;
+    border-radius: 4px;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+#form-dropdown-sesion input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #6DBD9E;
+    border-radius: 4px;
+    min-width: 150px;
+    max-width: 320px;
+    font-family: 'Lucida Sans', sans-serif;
+}
+
+/* Botones de formularios desktop */
+#form-dropdown-busqueda button[type="submit"] {
+    height: 38px;
+    margin-top: 10px;
+    margin-left: 160px;
+    width: calc(100% - 215px);
+    color: white;
+    background-color: #3D6C5E;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form-dropdown-sesion button[type="submit"] {
+    height: 38px;
+    width: 320px;
+    color: white;
+    background-color: #3D6C5E;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: center;
+    transition: background-color 0.3s;
+}
+
+#form-dropdown-busqueda button[type="submit"]:hover,
+#form-dropdown-sesion button[type="submit"]:hover {
+    background-color: #75A39A;
+}
+
+/* Ayuda centrada desktop */
+.form-ayuda {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.form-ayuda a {
+    font-size: 13px;
+    color: #3D6C5E;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.form-ayuda a:hover {
+    color: #6DBD9E;
+}
+
+/* ===========================
+   MENÚ HAMBURGUESA DESKTOP
+   =========================== */
+
+#menu-dropdown-desktop {
+    position: relative;
+}
+
+.content-dropdown-desktop {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background-color: white;
+    border: 2px solid #6DBD9E;
+    box-shadow: 0 4px 10px rgba(109, 189, 158, 0.3);
+    z-index: 1000;
+    border-radius: 4px;
+    overflow: visible;
+    width: 400px;
+}
+
+/* Piquito superior del menú desktop */
+.content-dropdown-desktop::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #6DBD9E;
+    z-index: 1001;
+}
+
+.content-dropdown-desktop::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    z-index: 1002;
+}
+
+.content-dropdown-desktop.show {
+    display: block !important;
+}
+
+.desktop-menu-container {
+    padding: 10px 0;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* ===========================
+   ESTILOS DEL MENÚ MOBILE
+   =========================== */
+
+#menu-dropdown {
+    position: relative;
+}
+
+.content-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 2px solid #6DBD9E;
+    box-shadow: 0 4px 10px rgba(109, 189, 158, 0.3);
+    z-index: 1000;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+/* Piquito superior del menú mobile */
+.content-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #6DBD9E;
+    z-index: 1001;
+}
+
+.content-dropdown::after {
+    content: '';
+    position: absolute;
+    top: -9px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    z-index: 1002;
+}
+
+.mobile-menu-container {
+    padding: 10px 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+/* Items del menú */
+.menu-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+/* Links y botones del menú */
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3D6C5E;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #f8f8f8;
+    color: #6DBD9E;
+}
+
+.menu-link i {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.menu-link .arrow-icon {
+    margin-left: auto;
+    transition: transform 0.3s;
+    font-size: 16px;
+}
+
+.menu-link.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenús */
+.submenu {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+.submenu.show {
+    display: block;
+}
+
+.submenu h3 {
+    color: #3D6C5E;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.submenu p {
+    color: #6F6F6F;
+    font-size: 13px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* Formularios dentro de submenús */
+.submenu form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.submenu .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submenu label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #3D6C5E;
+}
+
+.submenu input {
+    padding: 10px;
+    border: 2px solid #6DBD9E;
+    border-radius: 4px;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 14px;
+}
+
+.submenu button[type="submit"] {
+    padding: 12px;
+    background-color: #3D6C5E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+.submenu button[type="submit"]:hover {
+    background-color: #75A39A;
+}
+
+.submenu .form-ayuda {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.submenu .form-ayuda a {
+    font-size: 12px;
+    color: #3D6C5E;
+    text-decoration: none;
+    text-align: center;
+    font-weight: normal;
+}
+
+.submenu .form-ayuda a:hover {
+    color: #6DBD9E;
+}
+
+/* Divisor y descripción de sección */
+.menu-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+.menu-description {
+    padding: 15px 20px;
+    background-color: #f5f9f8;
+    border-left: 3px solid #6DBD9E;
+    margin: 10px 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.menu-description p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4a4a4a;
+    font-weight: normal;
+    margin: 0;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.menu-description.active {
+    background-color: #e8f5f1;
+    border-left-color: #3D6C5E;
+}
+
+.menu-description.active p {
+    color: #2d5549;
+    font-weight: normal;
+}
+
+/* CONTENIDO PRINCIPAL */
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* FOOTER */
+footer {
+    background-color: #6F6F6F;
+    color: white;
+    padding: 30px 20px 20px 20px;
+    font-weight: normal;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-content-left {
+    flex-shrink: 0;
+}
+
+.footer-content-center {
+    flex-grow: 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-logo {
+    max-width: 170px;
+    height: auto;
+    display: block;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #6DBD9E;
+}
+
+footer p {
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#footer-informacion {
+    font-style: normal;     /* address trae italica por defecto */
+    line-height: 1.6;
+    font-size: 14px;
+    color: white;
+    max-width: 380px;       /* evita que el texto se expanda demasiado */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 950px) {
+    /* Ocultar elementos desktop */
+    .desktop-only {
+        display: none !important;
+    }
+
+    /* Mostrar elementos mobile */
+    .mobile-only {
+        display: flex !important;
+    }
+
+    /* Navbar más compacta */
+    .navbar-custom {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+    }
+
+    /* Logo más pequeño */
+    #logo-sesea img {
+        width: 90px;
+    }
+
+    /* Alineación derecha en mobile */
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-opcions a {
+        font-size: 14px;
+    }
+
+    .dropdown-btn {
+        padding: 8px;
+    }
+
+    .dropdown-btn i {
+        font-size: 32px;
+    }
+
+    /* Barra lateral del menú mobile */
+    .content-dropdown {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        border-radius: 0;
+        transition: right 0.3s ease-out;
+        z-index: 9999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ocultar el piquito en mobile */
+    .content-dropdown::before,
+    .content-dropdown::after {
+        display: none;
+    }
+
+    .content-dropdown.show {
+        right: 0 !important;
+        display: block !important;
+    }
+
+    /* Overlay oscuro detrás del menú */
+    .content-dropdown.show::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        display: block;
+    }
+
+    /* Contenedor del header de la barra lateral */
+    .sidebar-header {
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        background: #ffffff;
+    }
+
+    /* Botón de cerrar */
+    .close-sidebar-btn {
+        background: transparent;
+        font-size: 20px;
+        color: #3D6C5E;
+        cursor: pointer;
+        padding: 8px;
+        line-height: 1;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+
+    .close-sidebar-btn:hover {
+        color: #e9f2ef;
+        border-radius: 30px;
+        background: #6DBD9E;
+    }
+
+    /* Ajustar el contenedor del menú para ocupar toda la altura */
+    .mobile-menu-container {
+        max-height: 100vh;
+        overflow-y: auto;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas */
+    .navbar-custom {
+        padding: 0 15px;
+    }
+
+    #logo-sesea img {
+        width: 75px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-opcions a {
+        font-size: 13px;
+    }
+
+    .content-dropdown {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .menu-link {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .submenu {
+        padding: 15px;
+    }
+
+    .close-sidebar-btn {
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        width: 36px;
+        height: 36px;
+    }
+
+    footer .footer-logo{
+         max-width: 100px;
+    }
+
+    footer .footer-content-center{
+        font-size: 10px;
+    }
+}
+
+/* Animación de entrada desde la derecha */
+@keyframes slideIn {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+/* Personalización del scrollbar */
+.mobile-menu-container::-webkit-scrollbar,
+.desktop-menu-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mobile-menu-container::-webkit-scrollbar-track,
+.desktop-menu-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.mobile-menu-container::-webkit-scrollbar-thumb,
+.desktop-menu-container::-webkit-scrollbar-thumb {
+    background: #6DBD9E;
+    border-radius: 3px;
+}
+
+.mobile-menu-container::-webkit-scrollbar-thumb:hover,
+.desktop-menu-container::-webkit-scrollbar-thumb:hover {
+    background: #3D6C5E;
+}

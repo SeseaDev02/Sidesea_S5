@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+    {% if folio %}
+        <h2>Folio introducido: {{ folio }}</h2>
+    {% else %}
+        <h2>No has enviado ningún folio aún.</h2>
+    {% endif %}
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}

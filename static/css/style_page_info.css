@@ -1,0 +1,151 @@
+/* Faltas Administrativas - Estilos únicos */
+.info-faltas-main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Imagen de fondo transparente */
+.info-faltas-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 90%;
+    height: 100%;
+    background-image: url('/static/image/circulos_sesea.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;   /* 👈 AHORA SIEMPRE ABAJO */
+    opacity: 0.16;
+    z-index: 0;
+}
+
+
+.info-faltas-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+    color: white;
+}
+
+.info-faltas-titulo {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-faltas-intro {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.info-faltas-descripcion{
+    text-align: justify;
+    margin-bottom: 35px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.info-faltas-subtitulo{
+    margin-bottom: 20px;
+}
+
+.info-faltas-intro strong {
+    font-weight: 700;
+}
+
+.info-faltas-listado {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.info-faltas-listado li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.info-faltas-listado li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.info-faltas-footer {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.info-faltas-footer a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.info-faltas-footer a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .info-faltas-main {
+        padding: 40px 25px;
+    }
+
+    .info-faltas-main::before {
+        width: 60%;
+        opacity: 0.1;
+    }
+
+    .info-faltas-titulo {
+        font-size: 28px;
+    }
+
+    .info-faltas-intro,
+    .info-faltas-listado li,
+    .info-faltas-footer {
+        font-size: 14px;
+    }
+
+    .info-faltas-listado li {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-faltas-main {
+        padding: 30px 20px;
+    }
+
+    .info-faltas-main::before {
+        width: 70%;
+        opacity: 0.08;
+    }
+
+    .info-faltas-titulo {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .info-faltas-intro,
+    .info-faltas-listado li,
+    .info-faltas-footer {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style_page_info.css' %}" >
+{% endblock %}
+
+{% block content %}
+    <div class="info-faltas-main" style="background-color: #6DB5B0">
+        <div class="info-faltas-content">
+
+            <h1 class="info-faltas-titulo">Faltas administrativas NO GRAVES</h1>
+            
+            <div class="info-faltas-intro">
+                <p>De conformidad con lo previsto en el artículo 49, de la<br>
+                <strong>Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo (LRAEMO)</strong>,<br>
+                se consideran como faltas administrativas <strong>NO GRAVES</strong> de los servidores públicos, las siguientes:</p>
+            </div>
+
+            <ul class="info-faltas-listado">
+                <li>No cumplir con las funciones, atribuciones y comisiones encomendadas.</li>
+                <li>No observar disciplina y respeto en sus funciones.</li>
+                <li>No denunciar actos de que se conozcan o adviertan en ejercicio de sus funciones.</li>
+                <li>No atender instrucciones de sus superiores, relacionadas con el servicio público.</li>
+                <li>No presentar en tiempo y forma las declaraciones de situación patrimonial y de intereses que le correspondan.</li>
+                <li>No registrar, integrar, custodiar o cuidar la documentación e información que tenga bajo su responsabilidad; ni evitar su sustracción, distracción o mal uso.</li>
+                <li>No supervisar que los servidores públicos bajo su dirección cumplan sus obligaciones.</li>
+                <li>No rendir cuentas sobre el ejercicio de sus funciones.</li>
+                <li>No colaborar en los procedimientos judiciales y administrativos en los que sea parte.</li>
+                <li>No verificar, para poder realizar la contratación de adquisiciones, arrendamientos, servicios o enajenaciones, que el contratante no desempeñe empleo, cargo o comisión en el servicio público o, en su caso, que no exista Conflicto de Interés.</li>
+                <li>No entregar los informes trimestrales relativos a la Cuenta Pública.</li>
+                <li>Causar daños y perjuicios, de manera culposa o negligente, a la Hacienda Pública o al patrimonio de un Órgano del Estado.</li>
+            </ul>
+
+            <div class="info-faltas-footer">
+                <p>Consulta la Guía Ciudadana sobre Faltas Administrativas Graves y No Graves <a href="{% url 'sidesea_home:guias_ciudadanas' %}">aquí</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}

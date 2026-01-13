@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style_page_info.css' %}" >
+{% endblock %}
+
+{% block content %}
+<div class="info-faltas-main graves" style="background-color: #6B6B6B">
+        <div class="info-faltas-content">
+            <h1 class="info-faltas-titulo">Faltas administrativas GRAVES</h1>
+            
+            <div class="info-faltas-intro">
+                <p>De conformidad con lo previsto en el Capítulo II, del Título Tercero, de la<br>
+                <strong>Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo (LRAEMO)</strong>,<br>
+                se consideran como faltas administrativas <strong>GRAVES</strong> de los servidores públicos, las siguientes:</p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Cohecho</h2>
+                <p class="info-faltas-descripcion">
+                    Incurrirá en cohecho, la o el servidor público que exija, acepte, obtenga o pretenda obtener, por sí o a través de terceros, con motivo de sus funciones, cualquier beneficio no comprendido en su remuneración como servidor público, que podría consistir en dinero; valores; bienes muebles o inmuebles; incluso mediante enajenación en precio notoriamente inferior al que se tenga en el mercado ordinario; donaciones; servicios; empleos o comisiones, para sí, o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas antes referidas formen parte. (Artículo 52 de la LRAEMO)
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Peculado</h2>
+                <p class="info-faltas-descripcion">
+                    Cometerá peculado la o el servidor público que autorice, solicite o realice actos para el uso o apropiación para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas referidas forme parte, de recursos públicos, sean materiales, humanos o financieros, sin fundamento jurídico o en contraposición a las normas aplicables. (Artículo 53 de la LRAEMO)
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Desvío de Recursos Públicos</h2>
+                <p class="info-faltas-descripcion">
+                    Será responsable de desvío de recursos públicos la o el servidor público que autorice, solicite o realice actos para la asignación o desvío de recursos públicos, sean materiales, humanos o financieros, sin fundamento jurídico o en contraposición a las normas aplicables. (Artículo 54 de la LRAEMO)
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Utilización Indebida de Información</h2>
+                <p class="info-faltas-descripcion">
+                    Incurrirá en utilización indebida de información la o el servidor público que adquiera para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas antes referidas formen parte, bienes inmuebles, muebles y valores que pudieren incrementar su valor o, en general, que mejoren sus condiciones, así como obtener cualquier ventaja o beneficio privado, como resultado de información privilegiada de la cual haya tenido conocimiento. (Artículo 55 LRAEMO)
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Abuso de Funciones</h2>
+                <p class="info-faltas-descripcion">
+                    Incurrirá en abuso de funciones la o el servidor público que ejerza atribuciones que no tenga conferidas o se valga de las que tenga, para realizar o inducir actos u omisiones arbitrarios, para generar un beneficio para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas antes referidas formen parte, o para causar perjuicio a alguna persona o al servicio público; así como cuando realiza por sí o a través de un tercero, alguna de las conductas descritas en el artículo 9 Bis de la Ley por una Vida Libre de Violencia para las Mujeres en el Estado de Michoacán de Ocampo. (Artículo 57 LRAEMO)
+                </p>
+            </div>
+
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Actuación Bajo Conflicto de Interés</h2>
+                <p class="info-faltas-descripcion">
+                    Incurre en actuación bajo Conflicto de Interés la o el servidor público que intervenga por motivo de su empleo, cargo o comisión en cualquier forma, en la atención, tramitación o resolución de asuntos en los que tenga interés personal o impedimento legal.
+                    Al tener conocimiento de los asuntos mencionados en el párrafo anterior, la o el Servidor Público informará tal situación a la jefa o jefe inmediato o al órgano que determine las disposiciones aplicables de los Órganos del Estado, solicitando sea excusado de participar en cualquier forma en la atención, tramitación o resolución de los mismos.
+                    Será obligación del jefe inmediato determinar y comunicarle a la o el servidor público, a más tardar 48 horas antes del plazo establecido para atender el asunto en cuestión, los casos en que no sea posible abstenerse de intervenir en los asuntos, así como establecer instrucciones por escrito para la atención, tramitación o resolución imparcial y objetiva de dichos asuntos. (Artículo 58 LRAEMO)
+                </p>
+            </div>
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Contratación Indebida</h2>
+                <p class="info-faltas-descripcion">
+                    Será responsable de contratación indebida la o el servidor público que autorice cualquier tipo de contratación, así como la selección, nombramiento o designación, de quien se encuentre impedido por disposición legal o inhabilitado por resolución de autoridad competente para ocupar un empleo, cargo o comisión en el servicio público o inhabilitado para realizar contrataciones con los Órganos del Estado siempre que en el caso de las inhabilitaciones, al momento de la autorización, éstas se encuentren inscritas en el Sistema Nacional de Servidores Públicos y Particulares Sancionados de la Plataforma Digital Estatal. (Artículo 59 de la LRAEMO)                
+                </p>
+            </div>
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Enriquecimiento Oculto u Ocultamiento de Conflicto de Interés</h2>
+                <p class="info-faltas-descripcion">
+                    Incurrirá en enriquecimiento oculto u ocultamiento de Conflicto de Interés la o el servidor público que falte a la veracidad en la presentación de las declaraciones de situación patrimonial o de intereses, que tenga como fin ocultar, respectivamente, el incremento en su patrimonio o el uso y disfrute de bienes o servicios que no sea explicable o justificable, o un Conflicto de Interés. (Artículo 60 de la LRAEMO).                
+                </p>
+            </div>
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Tráfico de Influencias</h2>
+                <p class="info-faltas-descripcion">
+                    Cometerá tráfico de influencias la o el servidor público que utilice la posición que su empleo, cargo o comisión le confiere para inducir a que otro servidor público efectúe, retrase u omita realizar algún acto de su competencia, para generar cualquier beneficio, provecho o ventaja para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas antes referidas formen parte. (Artículo 61 LRAEMO)                
+                </p>
+            </div>
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Desacato</h2>
+                <p class="info-faltas-descripcion">
+                    Cometerá desacato la o el servidor público que, tratándose de requerimientos o resoluciones de autoridades fiscalizadoras, de control interno, judiciales, electorales o en materia de defensa de los derechos humanos o cualquier otra competente, proporcione información falsa, así como que no responda alguna, retrase deliberadamente y sin justificación la entrega de la información, a pesar de que le hayan sido impuestas medidas de apremio conforme a las disposiciones aplicables.
+                    Además, se tendrá por desacato cuando la o el servidor público responsable no haga entrega de dos o más informes trimestrales a la Cuenta Pública al Congreso, o a los responsables de su formulación, los rinda sin la totalidad de las características señaladas por la ley y la información complementaria que determine la Auditoría Superior de Michoacán o lo haga fuera de los plazos legales. (Artículo 63 LRAEMO)                
+                </p>
+            </div>
+            
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Abuso de Funciones</h2>
+                <p class="info-faltas-descripcion">
+                    Incurrirá en abuso de funciones la o el servidor público que ejerza atribuciones que no tenga conferidas o se valga de las que tenga, para realizar o inducir actos u omisiones arbitrarios, para generar un beneficio para sí o para su cónyuge, parientes consanguíneos, parientes civiles o para terceros con los que tenga relaciones profesionales, laborales o de negocios o para socios o sociedades de la o el Servidor Público o las personas antes referidas formen parte, o para causar perjuicio a alguna persona o al servicio público; así como cuando realiza por sí o a través de un tercero, alguna de las conductas descritas en el artículo 9 Bis de la Ley por una Vida Libre de Violencia para las Mujeres en el Estado de Michoacán de Ocampo. (Artículo 57 LRAEMO)
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Encubrimiento</h2>
+                <p class="info-faltas-descripcion">
+                    Será responsable de encubrimiento la o el servidor público que cuando en el ejercicio de sus funciones llegare a advertir actos u omisiones que pudieren constituir faltas administrativas, realice deliberadamente alguna conducta para su ocultamiento. (Artículo 62 de la LRAEMO)                
+                </p>
+            </div>
+
+            <div class="info-faltas-seccion">
+                <h2 class="info-faltas-subtitulo">Obstrucción de la Justicia en la Substanciación y Resolución de Faltas Administrativas</h2>
+                <p class="info-faltas-descripcion">
+                    Las o los servidores públicos responsables de la investigación, substanciación y resolución de las Faltas Administrativas incurrirán en obstrucción de la justicia cuando:
+                    Realice cualquier acto que simule conductas no graves durante la investigación de actos u omisiones calificados como graves en la Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo y demás disposiciones aplicables.
+                    Realice cualquier acto que oculte o simule los actos u omisiones calificados como graves en la Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo y demás disposiciones aplicables.
+                    No inicie el procedimiento correspondiente dentro de su ámbito de competencia, dentro del plazo de treinta días naturales, a partir de que tengan conocimiento de cualquier conducta que pudiera constituir una falta administrativa grave, faltas de particulares o un acto de corrupción.
+                    Revelen la identidad de un denunciante anónimo protegido bajo los procesos establecidos en la Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo. (Artículo 64 LRAEMO)                
+                </p>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+
+{% endblock %}

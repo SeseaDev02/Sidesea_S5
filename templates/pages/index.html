@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" >
+{% endblock %}
+
+{% block content %}
+
+    <!-- Modal de aviso de privacidad -->
+    <div id="privacyModal" class="privacy-modal-overlay">
+        <div class="privacy-modal-content">
+            <div class="privacy-modal-header">
+                <h2>AVISO DE PRIVACIDAD</h2>
+            </div>
+            <div class="privacy-modal-body">
+                <p>
+                    PRESENTACIÓN DE DENUNCIAS POR PRESUNTOS HECHOS DE CORRUPCIÓN O FALTAS ADMINISTRATIVAS QUE COMETAN SERVIDORES PÚBLICOS DEL ESTADO, O PARTICULARES VINCULADOS CON FALTAS ADMINISTRATIVAS GRAVES ANTE LA SECRETARÍA EJECUTIVA DEL SISTEMA ESTATAL ANTICORRUPCIÓN.                
+                </p>
+                <p>
+                    La Secretaría Ejecutiva del Sistema Estatal Anticorrupción (SESEA) a través de su Unidad de Denuncia Ciudadana, con domicilio en Artilleros de 1847 No. 640, Colonia Chapultepec Sur, C.P. 58260, Morelia, Michoacán, es la responsable del uso, tratamiento y protección de los datos personales que usted proporcione y es con motivo de sus funciones, a saber, los cuales serán protegidos conforme a lo dispuesto por la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Michoacán de Ocampo y demás normatividad aplicable.               
+                </p>
+                <p>
+                    Con quién compartimos su información personal y para qué fines?                
+                </p>
+                <p>
+                    Se le informa que no se realizarán transferencias de datos personales, salvo aquellas que no requieran consentimiento de los titulares, cuando la transferencia se realice entre responsables, siempre y cuando los datos personales se utilicen para el ejercicio de facultades propias, compatibles o análogas con la finalidad que motivó el tratamiento de los datos personales, y cuando exista una orden judicial, resolución o mandato fundado y motivado de autoridad competente, en términos de los artículos 62, 65, 66 de la Ley de Protección de Datos Personales en Posesión de Sujetos Obligados del Estado de Michoacán de Ocampo.                
+                </p>
+                <p>
+                    Si desea consultar nuestro aviso de privacidad integral, lo podrá consultar <a href="{% url 'sidesea_home:aviso_privacidad' %}" target="_blank">aquí</a>.
+                </p>
+            </div>
+            <div class="privacy-modal-actions">
+                <button id="acceptPrivacyBtn" class="privacy-btn-accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sección de imagen principal (sin logo ni botón) -->
+    <div class="imagen">
+        <!-- Imagen de fondo -->
+        <img src="{% static 'image/denuncia3.webp' %}" class="img-fondo" alt="SIDESEA - Sistema de Denuncia Pública">
+        
+        <!-- Imágenes superpuestas -->
+        <div class="imagenes-superiores">
+            <div class="caja-logo">
+                <img src="{% static 'image/logo-blanco.png' %}" class="img-logo-sesea" alt="Logo Blanco">
+            </div>
+            <div class="caja-grande">
+                <img src="{% static 'image/SeseaLogoTipo.png' %}" class="img-logo-sidesea" alt="SIDESEA Logotipo">
+            </div>
+        </div>
+        
+        <!-- Botón -->
+         <a class="btn-accion" href="{% url 'sidesea_denuncia:presentar_denuncia' %}">PRESENTAR DENUNCIA</a>
+        <!-- <button class="btn-accion" action="#">PRESENTAR DENUNCIA </button> -->
+    </div>
+
+    <!-- Información principal -->
+    <div class="info-main">
+        <div class="info-main-titulo">
+            <h2>¿Qué es <strong>SIDESEA</strong>?</h2>
+        </div>
+
+        <div class="informacion">
+            <p>
+                El Sistema de denuncia pública de faltas administrativas y hechos de corrupción, integra la Plataforma Digital Estatal, y tiene por objeto ser un canal electrónico para la presentación, registro y turno a la autoridad competente de las denuncias que las y los ciudadanos presenten por la probable comisión de faltas administrativas o hechos de corrupción, dentro del marco de la Ley de Responsabilidades Administrativas para el Estado de Michoacán de Ocampo y del Título Décimo Sexto del Código Penal para el Estado de Michoacán, y en contra de personas servidoras públicas del Estado de Michoacán, y de particulares vinculados con faltas administrativas.
+            </p>
+            <p>
+                Además, en este Sistema se podrá consultar el estatus del trámite en el que se encuentre la denuncia correspondiente, dado por la autoridad competente, hasta su total conclusión.
+            </p>
+            <p>
+                Este Sistema permitirá presentar denuncias de una manera fácil, ágil, gratuita y disponible durante las 24 horas, de los 365 días del año.
+            </p>
+        </div>
+    </div>
+
+    <!-- Secciones de información de denuncia -->
+    <div class="info-denuncia">
+        <div class="info-main-titulo">
+            <h2>¿Qué puedo denunciar en <strong>SIDESEA</strong>?</h2>
+        </div>
+        
+        <div class="categorias-denuncia">
+            <a href="{% url 'sidesea_home:info_no_graves' %}" class="categoria no-graves">
+                <p>Faltas administrativas <strong>NO GRAVES</strong></p>
+            </a>
+            
+            <a href="{% url 'sidesea_home:info_graves' %}" class="categoria graves">
+                <p>Faltas administrativas <strong>GRAVES</strong></p>
+            </a>
+            
+            <a href="{% url 'sidesea_home:info_particulares' %}" class="categoria particulares">
+                <p>Actos de <strong>PARTICULARES</strong><br>
+                Vinculados con faltas <strong>ADMINISTRATIVAS GRAVES</strong></p>
+            </a>
+            
+            <a href="{% url 'sidesea_home:info_corrupcion' %}" class="categoria corrupcion">
+                <p>Delitos por <strong>HECHOS DE CORRUPCIÓN</strong><br>
+                en que pueden incurrir las y los <strong>SERVIDORES PÚBLICOS</strong></p>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
