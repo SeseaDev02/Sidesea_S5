@@ -109,35 +109,49 @@ body {
     padding-right: 35px;
 }
 
-/* Botón de sesión con diseño especial */
 #nav-form-sesion {
-    background: radial-gradient(circle at right, transparent 0, transparent 35px, #3D6C5E 20px);
+    background: #3D6C5E;
     color: white !important;
-    height: 35px;
-    padding-left: 11px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 55px;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
-    max-width: 260px;
+    max-width: 300px;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
-}
-
-#nav-form-sesion:hover {
-    background: radial-gradient(circle at right, transparent 0, transparent 35px, #75A39A 20px);
-}
-
-#nav-form-sesion:hover i.bi {
-    color: #75A39A;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 #nav-form-sesion i.bi {
-    font-size: 50px;
+    position: absolute;
+    right: -10px;
+    font-size: 60px;
     color: #3D6C5E;
-    transform: translate(13px, 1px);
-    transition: color 0.3s;
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 4px solid #3D6C5E;
 }
+
+#nav-form-sesion:hover {
+    background: #4A8272;
+    transform: scale(1.05);
+}
+
+#nav-form-sesion:hover i.bi {
+    color: #4A8272;
+    /* box-shadow: -3px 0 0 0 #4A8272; */
+}
+
 
 /* DROPDOWNS DESKTOP - Ocultos por defecto */
 #form-dropdown-busqueda,
@@ -322,11 +336,13 @@ body {
     align-items: center;
     gap: 8px;
     text-align: center;
+    color: var(--color-primary);
+    font-size: 15px;
 }
 
 .form-ayuda a {
-    font-size: 13px;
-    color: #3D6C5E;
+    font-size: 15px;
+    color: var(--color-primary);
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -571,11 +587,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    font-size: 15px;
+    color: var(--color-primary);
+    font-weight: normal;
 }
 
 .submenu .form-ayuda a {
-    font-size: 12px;
-    color: #3D6C5E;
+    font-size: 15px;
+    color: var(--color-primary);
     text-decoration: none;
     text-align: center;
     font-weight: normal;
@@ -689,7 +708,7 @@ footer p {
     line-height: 1.6;
     font-size: 14px;
     color: white;
-    max-width: 380px;       /* evita que el texto se expanda demasiado */
+    max-width: 580px;       /* evita que el texto se expanda demasiado */
     margin: 0;
     padding: 0;
 }

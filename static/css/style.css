@@ -115,34 +115,11 @@ body {
     color: var(--color-accent);
 }
 
-.privacy-modal-content .btn-accion {
-    position: static;
-    display: block;
-    margin: 1.5rem auto 0;
-    padding: 12px 40px;
-    background-color: var(--color-primary);
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    transform: none;
-}
-
-/* .privacy-modal-content .btn-accion:hover {
-    background-color: var(--color-dark);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-} */
-
 .privacy-modal-actions {
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
     margin-top: 20px;
 }
-
 
 .privacy-btn-accept{
     color: white;
@@ -265,7 +242,6 @@ body {
     cursor: pointer;
     z-index: 3;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
     letter-spacing: 1px;
 }
 
@@ -327,6 +303,14 @@ body {
     color: var(--color-primary);
 }
 
+.informacion a {
+    color:var(--color-primary)
+}
+
+.informacion a:hover {
+    color:var(--color-accent)
+}
+
 /* información de denuncias */
 .info-denuncia {
     background-color: var(--color-white);
@@ -385,12 +369,12 @@ body {
 }
 
 /* Colores según la imagen */
-.categoria.no-graves {
-    background-color: #6DB5B0;
-}
-
 .categoria.graves {
     background-color: #6B6B6B;
+}
+
+.categoria.no-graves {
+    background-color: #6DB5B0;
 }
 
 .categoria.particulares {
@@ -461,10 +445,6 @@ body {
         padding: 30px 20px;
     }
 
-    .categoria:hover {
-        transform: translateX(5px); /* Menos desplazamiento en móvil */
-    }
-
 }
 
 @media (max-width: 576px) {
@@ -502,5 +482,18 @@ body {
     .btn-accion {
         padding: 10px 40px;
         font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-accion {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-accion {
+        font-size: 10px;
     }
 }

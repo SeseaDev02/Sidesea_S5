@@ -1,0 +1,1079 @@
+/* ========== LOGO ========== */
+.img-logo-sidesea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    padding: 0 25%;
+}
+
+/* ========== FORMULARIO PRINCIPAL ========== */
+#form-registro {
+    text-align: center;
+    margin: 20px;
+    padding: 0 50px;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#form-registro h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+#form-registro h3 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.registro-text {
+    text-align: center;
+    padding: 0 250px;
+    line-height: 1.5;
+    margin: 0;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* ========== SECCIÓN INFORMACIÓN PERSONAL ========== */
+#seccion-personal {
+    margin-bottom: 30px;
+}
+
+#seccion-personal .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+    left: -105px;
+}
+
+#seccion-personal label {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 200px;
+    font-weight: 500;
+    color: #187257;
+}
+
+#seccion-domicilio {
+    margin-bottom: 30px;
+    position: relative;
+    left: -50px;  /* Ajusta este valor: -50px, -100px, etc. */
+}
+
+.input-per {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-per:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+.select-custom {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 14px;
+    margin: 0;
+    color: #187257;
+    background: white;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 300px;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5' fill='%23187257'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+}
+
+.select-custom:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+.select-custom option {
+    background-color: white;
+    color: #187257;
+}
+
+/* ========== SECCIÓN DOMICILIO ========== */
+#seccion-domicilio {
+    margin-bottom: 30px;
+}
+
+#seccion-domicilio .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+#seccion-domicilio h3{
+    margin-left: 90px;
+}
+
+/* Fila de CALLE - label e input en línea horizontal - MÁS GRANDE */
+#seccion-domicilio .form-row:has(#calle) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seccion-domicilio label[for="calle"] {
+    display: inline-block;
+    text-align: right;
+    font-weight: 500;
+    color: #187257;
+    width: 85px;
+    flex-shrink: 0;
+}
+
+#calle {
+    display: inline-block;
+    width: 1400px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;/* ========== LOGO ========== */
+.img-logo-sidesea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    padding: 0 25%;
+}
+
+/* ========== FORMULARIO PRINCIPAL ========== */
+#form-registro {
+    text-align: center;
+    margin: 20px;
+    padding: 0 50px;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#form-registro h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+#form-registro h3 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.registro-text {
+    text-align: center;
+    padding: 0 250px;
+    line-height: 1.5;
+    margin: 0;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* ========== SECCIÓN INFORMACIÓN PERSONAL ========== */
+#seccion-personal {
+    margin-bottom: 30px;
+}
+
+#seccion-personal .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+    left: -105px;
+}
+
+#seccion-personal label {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 200px;
+    font-weight: 500;
+    color: #187257;
+}
+
+#seccion-domicilio {
+    margin-bottom: 30px;
+    position: relative;
+    left: -50px;  /* Ajusta este valor: -50px, -100px, etc. */
+}
+
+.input-per {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-per:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+.select-custom {
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    padding: 10px 14px;
+    margin: 0;
+    color: #187257;
+    background: white;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 300px;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5' fill='%23187257'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+}
+
+.select-custom:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+.select-custom option {
+    background-color: white;
+    color: #187257;
+}
+
+/* ========== SECCIÓN DOMICILIO ========== */
+#seccion-domicilio {
+    margin-bottom: 30px;
+}
+
+#seccion-domicilio .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+    position: relative;
+}
+
+#seccion-domicilio h3{
+    margin-left: 90px;
+}
+
+/* Fila de CALLE - label e input en línea horizontal - MÁS GRANDE */
+#seccion-domicilio .form-row:has(#calle) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#seccion-domicilio label[for="calle"] {
+    display: inline-block;
+    text-align: right;
+    font-weight: 500;
+    color: #187257;
+    width: 85px;
+    flex-shrink: 0;
+}
+
+#calle {
+    display: inline-block;
+    width: 1400px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#calle:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* Filas de dos inputs - alineados con ancho de calle */
+#seccion-domicilio .form-row:not(:has(#calle)) {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 15px;
+}
+
+.label-dom {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 80px;
+    font-weight: 500;
+    color: #187257;
+    line-height: 1.2;
+    white-space: normal;
+    flex-shrink: 0;
+}
+
+.input-dom {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1;
+    max-width: 280px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-calle {
+    max-width: 645px;
+}
+
+.input-dom:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* ========== SECCIÓN CREDENCIALES ========== */
+#seccion-credenciales {
+    margin-bottom: 30px;
+}
+
+#seccion-credenciales .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+    left: -105px;
+}
+
+#seccion-credenciales label:not(#label-toggle) {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 200px;
+    font-weight: 500;
+    color: #187257;
+}
+
+.input-user {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-user:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* Lista de reglas de contraseña */
+#rules {
+    text-align: left;
+    display: block;
+    list-style: none;
+    padding: 8px 12px;
+    margin: 10px auto;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+#rules li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #187257;
+}
+
+/* Mensaje de confirmación de contraseña */
+#confMsg {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px auto;
+    font-weight: 500;
+    width: 300px;
+    color: #187257;
+}
+
+/* Checkbox para mostrar/ocultar contraseñas */
+#label-toggle {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 10px auto;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    color: #187257;
+}
+
+#label-toggle:hover {
+    color: #6DBD9E;
+}
+
+#toggleAll {
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.check-color {
+    accent-color: #75A39A;
+}
+
+/* ========== BOTÓN DE REGISTRO ========== */
+#submitForm {
+    background-color: #187257;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#submitForm:hover:not(:disabled) {
+    background-color: #6DBD9E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submitForm:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#submitForm:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* ========== AVISO DE PRIVACIDAD ========== */
+#aviso-privacidad {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 290px;
+    line-height: 1.5;
+}
+
+#link-aviso {
+    color: #6DBD9E;
+    transition: color 0.3s ease;
+}
+
+#link-aviso:hover {
+    color: #75A39A;
+}
+
+/* ========== MODAL AVISO DE PRIVACIDAD ========== */
+#modal-privacidad {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-privacidad.mostrar {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido h2 {
+    color: #187257;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-texto {
+    color: #187257;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#btn-aceptar-privacidad {
+    background-color: #187257;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#btn-aceptar-privacidad:hover {
+    background-color: #6DBD9E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn-aceptar-privacidad:active {
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .img-logo-sidesea {
+        padding: 0 10%;
+    }
+
+    #form-registro {
+        padding: 0 20px;
+    }
+
+    .registro-text {
+        padding: 0 20px;
+    }
+
+    /* Sección Personal */
+    #seccion-personal .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+    }
+
+    #seccion-personal label {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input-per,
+    .select-custom {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* Sección Domicilio */
+    #seccion-domicilio .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+        max-width: 100%;
+    }
+
+    #seccion-domicilio label[for="calle"],
+    .label-dom {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #calle,
+    .input-dom {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* Sección Credenciales */
+    #seccion-credenciales .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+    }
+
+    #seccion-credenciales label:not(#label-toggle) {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input-user {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #rules,
+    #confMsg,
+    #label-toggle {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #aviso-privacidad {
+        padding: 0 20px;
+    }
+}
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+#calle:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* Filas de dos inputs - alineados con ancho de calle */
+#seccion-domicilio .form-row:not(:has(#calle)) {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 15px;
+}
+
+.label-dom {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 80px;
+    font-weight: 500;
+    color: #187257;
+    line-height: 1.2;
+    white-space: normal;
+    flex-shrink: 0;
+}
+
+.input-dom {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1;
+    max-width: 280px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-calle {
+    max-width: 645px;
+}
+
+.input-dom:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* ========== SECCIÓN CREDENCIALES ========== */
+#seccion-credenciales {
+    margin-bottom: 30px;
+}
+
+#seccion-credenciales .form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+    left: -105px;
+}
+
+#seccion-credenciales label:not(#label-toggle) {
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+    width: 200px;
+    font-weight: 500;
+    color: #187257;
+}
+
+.input-user {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    height: 35px;
+    padding: 10px 14px;
+    margin: 0;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #187257;
+    border: 2px solid #187257;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.input-user:focus {
+    border-color: #6DBD9E;
+    box-shadow: 0 0 0 2px rgba(109, 189, 158, 0.2);
+}
+
+/* Lista de reglas de contraseña */
+#rules {
+    text-align: left;
+    display: block;
+    list-style: none;
+    padding: 8px 12px;
+    margin: 10px auto;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+#rules li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #187257;
+}
+
+/* Mensaje de confirmación de contraseña */
+#confMsg {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px auto;
+    font-weight: 500;
+    width: 300px;
+    color: #187257;
+}
+
+/* Checkbox para mostrar/ocultar contraseñas */
+#label-toggle {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 10px auto;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    color: #187257;
+}
+
+#label-toggle:hover {
+    color: #6DBD9E;
+}
+
+#toggleAll {
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.check-color {
+    accent-color: #75A39A;
+}
+
+/* ========== BOTÓN DE REGISTRO ========== */
+#submitForm {
+    background-color: #187257;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+#submitForm:hover:not(:disabled) {
+    background-color: #6DBD9E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#submitForm:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#submitForm:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* ========== AVISO DE PRIVACIDAD ========== */
+#aviso-privacidad {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #187257;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 290px;
+    line-height: 1.5;
+}
+
+#link-aviso {
+    color: #6DBD9E;
+    transition: color 0.3s ease;
+}
+
+#link-aviso:hover {
+    color: #75A39A;
+}
+
+/* ========== MODAL AVISO DE PRIVACIDAD ========== */
+#modal-privacidad {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-privacidad.mostrar {
+    display: flex;
+}
+
+.modal-contenido {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido h2 {
+    color: #187257;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal-texto {
+    color: #187257;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+#btn-aceptar-privacidad {
+    background-color: #187257;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#btn-aceptar-privacidad:hover {
+    background-color: #6DBD9E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn-aceptar-privacidad:active {
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .img-logo-sidesea {
+        padding: 0 10%;
+    }
+
+    #form-registro {
+        padding: 0 20px;
+    }
+
+    .registro-text {
+        padding: 0 20px;
+    }
+
+    /* Sección Personal */
+    #seccion-personal .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+    }
+
+    #seccion-personal label {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input-per,
+    .select-custom {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* Sección Domicilio */
+    #seccion-domicilio .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+        max-width: 100%;
+    }
+
+    #seccion-domicilio label[for="calle"],
+    .label-dom {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #calle,
+    .input-dom {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    /* Sección Credenciales */
+    #seccion-credenciales .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        left: 0 !important;
+    }
+
+    #seccion-credenciales label:not(#label-toggle) {
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input-user {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #rules,
+    #confMsg,
+    #label-toggle {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #aviso-privacidad {
+        padding: 0 20px;
+    }
+}

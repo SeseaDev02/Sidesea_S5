@@ -1,15 +1,163 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block extra_css %}
-
+    <link rel="stylesheet" href="{% static 'css/style_registro.css' %}">
+    <!-- checar que hay en style.css que afecta los dropdown de iniciarsecion/registrarse yy aplicarlo al base -->
 {% endblock %}
 
 {% block content %}
-<h2>Form de registro</h2>
+<div>
+    <img src="{% static 'image/SeseaLogoTipo.png' %}" class="img-logo-sidesea" alt="SIDESEA Logotipo">
+</div>
 
+<div id="registro">
+    <form action="" method="" id="form-registro">
+
+        <h1>REGISTRO</h1>
+        <p class="registro-text">
+            Para poder registrarse como un usuario de la plataforma, por favor ingrese los datos solicitados a continuación.
+        </p>
+
+        <!-- Información personal -->
+        <div class="form-section" id="seccion-personal">
+            <h3>Información personal</h3>
+
+            <div class="form-row">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" name="nombre" required class="input-form input-per">
+            </div>
+
+            <div class="form-row">
+                <label for="apellidoP">Apellido Paterno:</label>
+                <input type="text" id="apellidoP" name="apellidoP" required class="input-form input-per">
+            </div>
+
+            <div class="form-row">
+                <label for="apellidoM">Apellido Materno:</label>
+                <input type="text" id="apellidoM" name="apellidoM" required class="input-form input-per">
+            </div>
+
+            <div class="form-row">
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" class="select-custom">
+                    <option value="">Especificar...</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="privacidad">Prefiero no decirlo</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required class="input-form input-per">
+            </div>
+
+            <div class="form-row">
+                <label for="cel">Teléfono Celular:</label>
+                <input type="tel" id="cel" name="cel" inputmode="numeric"
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                       class="input-form input-per">
+            </div>
+        </div>
+
+        <!-- Dirección -->
+        <div class="form-section" id="seccion-domicilio">
+            <h3>Dirección de domicilio</h3>
+
+            <div class="form-row">
+                <label for="calle" class="label-dom">Calle:</label>
+                <input type="text" id="calle" name="calle" class="input-form input-dom input-calle">
+            </div>
+
+            <div class="form-row">
+                <label for="col" class="label-dom">Colonia:</label>
+                <input type="text" id="col" name="col" class="input-form input-dom">
+
+                <label for="ciudad" class="label-dom">Ciudad o Municipio:</label>
+                <input type="text" id="ciudad" name="ciudad" class="input-form input-dom">
+            </div>
+
+            <div class="form-row">
+                <label for="estado" class="label-dom">Estado:</label>
+                <input type="text" id="estado" name="estado" class="input-form input-dom">
+
+                <label for="cp" class="label-dom">Código Postal:</label>
+                <input type="text" id="cp" name="cp" inputmode="numeric"
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                       class="input-form input-dom">
+            </div>
+        </div>
+
+        <!-- Credenciales -->
+        <div class="form-section" id="seccion-credenciales">
+            <h3>Credenciales de acceso</h3>
+
+            <p class="registro-text">
+                Para generar su perfil es necesario crear un nombre de usuario y una contraseña, mismos que se requeriran para
+                iniciar sesión en la pagina. Se recomienda que la contraseña solo la conozca la persona que creara el perfil.  
+            </p><br>
+
+            <div class="form-row">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" class="input-form input-user">
+            </div>
+
+            <div class="form-row">
+                <label for="passd">Contraseña:</label>
+                <input type="password" id="passd" name="passd" required minlength="8"
+                       class="input-form input-user">
+            </div>
+
+            <ul id="rules">
+                <li id="length">❌ Mínimo 8 caracteres</li>
+                <li id="upper">❌ Una mayúscula</li>
+                <li id="lower">❌ Una minúscula</li>
+                <li id="number">❌ Un número (0-9)</li>
+                <li id="symbol">❌ Un carácter especial ("#$%...")</li>
+            </ul>
+
+            <div class="form-row">
+                <label for="confPassd">Confirmar Contraseña:</label>
+                <input type="password" id="confPassd" name="confPassd" class="input-form input-user">
+            </div>
+
+            <p id="confMsg"></p>
+
+            <label for="toggleAll" id="label-toggle">
+                <input type="checkbox" id="toggleAll" class="check-color">
+                <span id="toggleText">Mostrar contraseñas</span>
+            </label>
+        </div>
+
+        <button id="submitForm" disabled>Registrar</button>
+
+    </form>
+
+    <p class="registro-text" id="aviso-privacidad"> <br>
+        Te recordamos que tus datos personales serán tratados conforme a la normatividad aplicable en materia de
+        <strong>Transparencia y Protección de Datos Personales</strong>,
+        conforme a lo establecido en el <a href="#" id="link-aviso">aviso de privacidad</a>.
+    </p>
+</div>
+
+<!-- MODAL AVISO DE PRIVACIDAD -->
+<div id="modal-privacidad">
+    <div class="modal-contenido">
+        <h2>Aviso de Privacidad</h2>
+        <p class="modal-texto">
+            Estimado denunciante la Secretaría Ejecutiva del Sistema Estatal Anticorrupción, a través del Sistema de Denuncias Públicas de Faltas Administrativas y Hechos de Corrupción de la Plataforma Digital Estatal, recabara y utilizará sus datos personales para integrar los expedientes de las denuncias que presenten las personas físicas o morales, por actos u omisiones cometidos por servidores públicos en el ejercicio de sus funciones y que pueda constituir una presunta falta administrativa o un hecho de corrupción.
+        </p>
+        <p class="modal-texto">
+            Los datos personales que se recaben de manera opcional y voluntaria, como lo es nombre completo, correo electrónico, teléfono particular, sexo, edad, escolaridad y ocupación, no serán materia de transferencia, salvo que se actualice alguna de las excepciones previstas en el artículo 22 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados.
+        </p>
+        <p class="modal-texto">
+            Se hace la precisión de que podrá ejercer sus derechos de acceso, rectificación, cancelación u oposición de sus datos personales (derechos ARCO) directamente en la Unidad de Transparencia de la Secretaría Ejecutiva del Sistema Estatal Anticorrupción, ubicada en la calle Artilleros de 1847, #640, Col. Chapultepec Sur, Código Postal 58260, Morelia, Michoacán; a través de la Plataforma Nacional de Transparencia en la siguiente liga electrónica (agregar liga), en el apartado de Solicitudes de Acceso a la Información; o bien mediante correo electrónico (agregar correo).
+        </p>
+        <button id="btn-aceptar-privacidad">Aceptar</button>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_js %}
-
+<script src="{% static 'js/formregistro.js' %}"></script>
 {% endblock %}
