@@ -288,7 +288,7 @@ body {
     border-radius: 2px;
 }
 
-.informacion {
+/* .informacion {
     padding: 10px;
     border-radius: 10px;
     animation: slideIn 1s ease;
@@ -309,7 +309,7 @@ body {
 
 .informacion a:hover {
     color:var(--color-accent)
-}
+} */
 
 /* información de denuncias */
 .info-denuncia {

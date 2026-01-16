@@ -1,3 +1,15 @@
+/* Variables de color */
+:root {
+    --color-primary: #187257;
+    --color-secondary: #75A39A;
+    --color-accent: #6DBD9E;
+    --color-dark: #106048;
+    --color-gray: #6F6F6F;
+    --color-light-gray: #f5f5f5;
+    --color-white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -26,7 +38,7 @@ body {
 /* NAVBAR */
 .navbar-custom {
     padding: 0 50px;
-    height: 120px;
+    height: 100px;
     width: 100%;
     border-bottom: solid 1px #6F6F6F;
 }
@@ -42,7 +54,7 @@ body {
 
 /* Logo */
 #logo-sesea img {
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
@@ -59,7 +71,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Botón hamburguesa */
@@ -67,6 +79,7 @@ body {
     background: none;
     border: none;
     padding: 5px;
+    padding-right: 0px;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -87,7 +100,7 @@ body {
     background: none;
     border: none;
     font-family: 'Lucida Sans', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #3D6C5E;
     cursor: pointer;
@@ -112,13 +125,13 @@ body {
 #nav-form-sesion {
     background: #3D6C5E;
     color: white !important;
-    height: 48px;
+    height: 40px;
     padding-left: 20px;
     padding-right: 55px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    max-width: 300px;
+    max-width: 280px;
     display: flex;
     align-items: center;
     position: relative;
@@ -128,13 +141,13 @@ body {
 
 #nav-form-sesion i.bi {
     position: absolute;
-    right: -10px;
-    font-size: 60px;
+    right: 0px;
+    font-size: 50px;
     color: #3D6C5E;
     background: white;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -588,13 +601,13 @@ body {
     flex-direction: column;
     gap: 8px;
     font-size: 15px;
-    color: var(--color-primary);
+    color: #187257;
     font-weight: normal;
 }
 
 .submenu .form-ayuda a {
     font-size: 15px;
-    color: var(--color-primary);
+    color: #187257;
     text-decoration: none;
     text-align: center;
     font-weight: normal;
@@ -752,7 +765,7 @@ footer p {
     }
 
     .navbar-opcions a {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .dropdown-btn {

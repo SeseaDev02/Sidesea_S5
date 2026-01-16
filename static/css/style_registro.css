@@ -1,3 +1,5 @@
+/* Reset y estilos base */
+
 /* ========== LOGO ========== */
 .img-logo-sidesea {
     position: relative;
@@ -549,12 +551,12 @@
 }
 
 #link-aviso {
-    color: #6DBD9E;
+    color: #187257;
     transition: color 0.3s ease;
 }
 
 #link-aviso:hover {
-    color: #75A39A;
+    color: #106048;
 }
 
 /* ========== MODAL AVISO DE PRIVACIDAD ========== */
@@ -914,7 +916,7 @@
 }
 
 #link-aviso {
-    color: #6DBD9E;
+    color: #187257;
     transition: color 0.3s ease;
 }
 
